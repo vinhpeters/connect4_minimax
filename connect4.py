@@ -213,7 +213,7 @@ def player1_mode(difficulty):
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                pygame.quit()
+                pygame.display.quit()
                 sys.exit()
 
             if event.type == pygame.MOUSEMOTION:
@@ -326,7 +326,7 @@ def players2_mode():
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                pygame.quit()
+                pygame.display.quit()
                 sys.exit()
 
             player = turn
@@ -478,7 +478,8 @@ SCREEN.fill(WHITE)
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
+            pygame.display.quit()
+            sys.exit()
 
     draw_board(board)
 
@@ -490,7 +491,8 @@ while True:
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    pygame.quit()
+                    pygame.display.quit()
+                    sys.exit()
 
             draw_board(board)
 
