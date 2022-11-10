@@ -471,7 +471,7 @@ hard_btn = Button(540, 0, hard_btn_img)
 # Game window
 pygame.display.set_caption('Connect 4')
 
-myfont = pygame.font.SysFont('arial', 75, bold=True)
+myfont = pygame.font.SysFont('assets\Raleway-VariableFont_wght.ttf', 90)
 
 SCREEN.fill(WHITE)
 
