@@ -1,5 +1,5 @@
 import numpy as np
-import random
+from random import choice
 import pygame
 import sys
 from math import inf, floor
@@ -134,13 +134,13 @@ def get_terminal_nodes(board):
 
 def get_depth(difficulty):
     if difficulty == 1:
-        depth = random.choice((1, 1, 1, 2))
+        depth = choice((1, 1, 1, 2))
         return depth
     if difficulty == 2:
-        depth = random.choice((1, 2, 2, 3, 3))
+        depth = choice((1, 2, 2, 3, 3))
         return depth
     if difficulty == 3:
-        depth = random.choice((5, 6))
+        depth = choice((5, 6))
         return depth
 
 
@@ -160,7 +160,7 @@ def minimax_ai(board, depth, alpha, beta, maxPlayer=True):
 
     if maxPlayer:
         value = -inf
-        best_col = random.choice(open_cols)
+        best_col = choice(open_cols)
         for col in open_cols:
             row = next_open(board, col)
             board_copy = board.copy()
@@ -177,7 +177,7 @@ def minimax_ai(board, depth, alpha, beta, maxPlayer=True):
 
     else:
         value = inf
-        best_col = random.choice(open_cols)
+        best_col = choice(open_cols)
         for col in open_cols:
             row = next_open(board, col)
             board_copy = board.copy()
@@ -318,7 +318,7 @@ def players2_mode():
     # 2 Players loop
     board = create_board(ROWS, COLUMNS)
 
-    turn = random.choice((0, 1))
+    turn = choice((0, 1))
     game_over = False
     clear()
     draw_board(board)
