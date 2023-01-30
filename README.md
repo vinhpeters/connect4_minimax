@@ -1,4 +1,24 @@
 # Connect 4 PyGame with Minimax AI
+![connect4](https://user-images.githubusercontent.com/10931117/215370212-6aac4c01-577a-4520-9789-a8cfc9ad98be.png)
+
+## Setup
+- Clone the GitHub repository locally to your computer
+- In the root directory run:
+```sh
+pip install -r requirements.txt
+```
+
+```sh
+python connect4.py
+```
+The application can also be run via connect4.exe on Windows.
+
+## Technologies
+- Python 3
+- numpy
+- Pygame
+
+## About
 This application serves as a simple implementation of the minimax algorithm with alpha-beta pruning in a connect 4 style game. 
 https://en.wikipedia.org/wiki/Minimax
 https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning
@@ -23,4 +43,4 @@ In 1-player mode, your opponent will be player 2, whose moves are determined by 
 |Hard| [5, 6]|
 
 ## Heuristic evaluation function
-The decison_score and space_score  function serves as the scoring scheme to score each game state with the minimax game tree. The function adds a max score of 1000 for a winning condition. Each open sequence of 3 pieces adds 5 points and  sequences of 2 are worth 2 points. For each of the opponents open sequences of the 3 pieces, 4 points are subtracted to incentive the AI to block your sequences of 3 pieces. Finally, pieces placed in the center column add 2 points to the score as center pieces create more opportunities for sequences. This causes the AI to favor placing pieces in the center column, especially in the opening of the game.
+The decison_score and space_score function serves as the scoring scheme to score each game state with the minimax game tree. The function adds a max score of 1000 for a winning condition. Each open sequence of 3 pieces adds 5 points and  sequences of 2 are worth 2 points. For each of the opponents open sequences of the 3 pieces, 4 points are subtracted to incentive the AI to block your sequences of 3 pieces. Finally, pieces placed in the center column add 2 points to the score as center pieces create more opportunities for sequences. This causes the AI to favor placing pieces in the center column, especially in the opening of the game.
